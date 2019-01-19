@@ -45,7 +45,7 @@ bundle_identifier=`/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier" $info_p
 #时间戳
 formattedDate=$(date "+%Y%m%d%H%M%S")
 
-# 指定输出ipa名称 : scheme_name + bundle_version
+# 指定输出ipa名称 : 项目名字 + 分支名字 + 版本号 + 时间戳
 ipa_name="$scheme_name-${GIT_BRANCH#*/}-V$bundle_version-$formattedDate"
 
 # 删除旧.xcarchive文件
